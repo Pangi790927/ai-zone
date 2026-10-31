@@ -1,0 +1,42 @@
+// PDF Viewer settings. Override in Packages/User/PDFViewer.sublime-settings
+{
+	// Intercept .pdf files opened in Sublime and show them rendered instead of as hex.
+	"enabled": true,
+
+	// Initial zoom: "fit_width", "fit_page", or a number (1.0 = 100% = 96 DPI).
+	"default_zoom": "fit_width",
+
+	// Horizontal margin around a page and vertical gap between pages, in pixels.
+	"margin": 16,
+	"page_gap": 10,
+
+	// How many pages above/below the visible ones to keep rendered.
+	"prerender_pages": 3,
+
+	// Parallel renderer processes (each keeps the document open).
+	"render_threads": 3,
+
+	// Upper bound for the raster resolution (protects memory when zooming in).
+	"max_render_dpi": 400,
+
+	// Multiply the raster resolution by this for HiDPI screens (e.g. 2.0);
+	// the page is still displayed at its logical size.
+	"render_scale": 1.0,
+
+	// "auto" uses mutool (mupdf-tools) and falls back to pdftoppm (poppler-utils) when mutool
+	// or stdbuf is missing. Search highlights and the outline need mutool.
+	// Can be forced to "pdftoppm" or "mutool".
+	"renderer": "auto",
+
+	// Select text and follow links with the mouse. Sublime doesn't report clicks on the
+	// pages to plugins, so this reads the mouse from X11 directly: Linux with X11 only
+	// (and Sublime under XWayland). Needs mutool.
+	"mouse_selection": true,
+
+	// Explicit paths for the tools, e.g. {"pdftoppm": "/opt/poppler/bin/pdftoppm"}.
+	"tool_paths": {},
+
+	// Print diagnostics to the console (and to this file, if set).
+	"debug": false,
+	"debug_log_file": ""
+}

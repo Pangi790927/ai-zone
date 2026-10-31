@@ -1,0 +1,68 @@
+[
+	// Zoom
+	{ "keys": ["+"], "command": "pdf_viewer_zoom", "args": {"delta": 0.1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["="], "command": "pdf_viewer_zoom", "args": {"delta": 0.1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["ctrl+="], "command": "pdf_viewer_zoom", "args": {"delta": 0.1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["ctrl+keypad_plus"], "command": "pdf_viewer_zoom", "args": {"delta": 0.1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["-"], "command": "pdf_viewer_zoom", "args": {"delta": -0.1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["ctrl+-"], "command": "pdf_viewer_zoom", "args": {"delta": -0.1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["ctrl+keypad_minus"], "command": "pdf_viewer_zoom", "args": {"delta": -0.1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["0"], "command": "pdf_viewer_zoom", "args": {"mode": "fit_width"}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["ctrl+0"], "command": "pdf_viewer_zoom", "args": {"mode": "fit_width"}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["w"], "command": "pdf_viewer_zoom", "args": {"mode": "fit_width"}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["f"], "command": "pdf_viewer_zoom", "args": {"mode": "fit_page"}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["1"], "command": "pdf_viewer_zoom", "args": {"zoom": 1.0}, "context": [{"key": "setting.pdf_viewer"}] },
+
+	// Navigation
+	{ "keys": ["n"], "command": "pdf_viewer_goto_page", "args": {"delta": 1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["space"], "command": "pdf_viewer_goto_page", "args": {"delta": 1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": [" "], "command": "pdf_viewer_goto_page", "args": {"delta": 1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["right"], "command": "pdf_viewer_goto_page", "args": {"delta": 1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["p"], "command": "pdf_viewer_goto_page", "args": {"delta": -1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["shift+space"], "command": "pdf_viewer_goto_page", "args": {"delta": -1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["backspace"], "command": "pdf_viewer_goto_page", "args": {"delta": -1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["left"], "command": "pdf_viewer_goto_page", "args": {"delta": -1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["g"], "command": "pdf_viewer_goto_page", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["ctrl+g"], "command": "pdf_viewer_goto_page", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["j"], "command": "pdf_viewer_scroll", "args": {"lines": 3}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["down"], "command": "pdf_viewer_scroll", "args": {"lines": 3}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["k"], "command": "pdf_viewer_scroll", "args": {"lines": -3}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["up"], "command": "pdf_viewer_scroll", "args": {"lines": -3}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["home"], "command": "pdf_viewer_goto_page", "args": {"page": 1}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["end"], "command": "pdf_viewer_goto_page", "args": {"page": -1}, "context": [{"key": "setting.pdf_viewer"}] },
+
+	// Tools
+	{ "keys": ["/"], "command": "pdf_viewer_find", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["ctrl+f"], "command": "pdf_viewer_find", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["f3"], "command": "pdf_viewer_find_next", "args": {"forward": true}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["shift+f3"], "command": "pdf_viewer_find_next", "args": {"forward": false}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["enter"], "command": "pdf_viewer_find_next", "args": {"forward": true}, "context": [{"key": "setting.pdf_viewer"}, {"key": "pdf_viewer_search"}] },
+	{ "keys": ["shift+enter"], "command": "pdf_viewer_find_next", "args": {"forward": false}, "context": [{"key": "setting.pdf_viewer"}, {"key": "pdf_viewer_search"}] },
+	{ "keys": ["alt+enter"], "command": "pdf_viewer_list_matches", "context": [{"key": "setting.pdf_viewer"}, {"key": "pdf_viewer_search"}] },
+	{ "keys": ["escape"], "command": "pdf_viewer_clear_search", "context": [
+		{"key": "setting.pdf_viewer"}, {"key": "pdf_viewer_search"},
+		{"key": "panel_visible", "operand": false}, {"key": "overlay_visible", "operand": false},
+		{"key": "popup_visible", "operand": false}, {"key": "auto_complete_visible", "operand": false}
+	] },
+
+	// Selection (drag with the mouse) and links
+	{ "keys": ["ctrl+c"], "command": "pdf_viewer_copy", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["ctrl+insert"], "command": "pdf_viewer_copy", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["escape"], "command": "pdf_viewer_clear_selection", "context": [
+		{"key": "setting.pdf_viewer"}, {"key": "pdf_viewer_selection"},
+		{"key": "panel_visible", "operand": false}, {"key": "overlay_visible", "operand": false},
+		{"key": "popup_visible", "operand": false}, {"key": "auto_complete_visible", "operand": false}
+	] },
+	{ "keys": ["alt+left"], "command": "pdf_viewer_history", "args": {"forward": false}, "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["alt+right"], "command": "pdf_viewer_history", "args": {"forward": true}, "context": [{"key": "setting.pdf_viewer"}] },
+
+	{ "keys": ["o"], "command": "pdf_viewer_outline", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["ctrl+r"], "command": "pdf_viewer_outline", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["t"], "command": "pdf_viewer_show_text", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["e"], "command": "pdf_viewer_open_external", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["h"], "command": "pdf_viewer_open_raw", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["i"], "command": "pdf_viewer_toggle_invert", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["r"], "command": "pdf_viewer_reload", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["?"], "command": "pdf_viewer_help", "context": [{"key": "setting.pdf_viewer"}] },
+	{ "keys": ["shift+/"], "command": "pdf_viewer_help", "context": [{"key": "setting.pdf_viewer"}] },
+]

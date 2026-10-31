@@ -1,0 +1,41 @@
+[
+	{ "caption": "PDF Viewer: Open PDF…", "command": "pdf_viewer_open" },
+	{ "caption": "PDF Viewer: Zoom In", "command": "pdf_viewer_zoom", "args": {"delta": 0.1} },
+	{ "caption": "PDF Viewer: Zoom Out", "command": "pdf_viewer_zoom", "args": {"delta": -0.1} },
+	{ "caption": "PDF Viewer: Fit Width", "command": "pdf_viewer_zoom", "args": {"mode": "fit_width"} },
+	{ "caption": "PDF Viewer: Fit Page", "command": "pdf_viewer_zoom", "args": {"mode": "fit_page"} },
+	{ "caption": "PDF Viewer: Actual Size (100%)", "command": "pdf_viewer_zoom", "args": {"zoom": 1.0} },
+	{ "caption": "PDF Viewer: Go to Page…", "command": "pdf_viewer_goto_page" },
+	{ "caption": "PDF Viewer: Find Text…", "command": "pdf_viewer_find" },
+	{ "caption": "PDF Viewer: Next Match", "command": "pdf_viewer_find_next", "args": {"forward": true} },
+	{ "caption": "PDF Viewer: Previous Match", "command": "pdf_viewer_find_next", "args": {"forward": false} },
+	{ "caption": "PDF Viewer: List Matches", "command": "pdf_viewer_list_matches" },
+	{ "caption": "PDF Viewer: Clear Search", "command": "pdf_viewer_clear_search" },
+	{ "caption": "PDF Viewer: Outline (Bookmarks)", "command": "pdf_viewer_outline" },
+	{ "caption": "PDF Viewer: Copy Selected Text", "command": "pdf_viewer_copy" },
+	{ "caption": "PDF Viewer: Clear Selection", "command": "pdf_viewer_clear_selection" },
+	{ "caption": "PDF Viewer: Back (after following a link)", "command": "pdf_viewer_history", "args": {"forward": false} },
+	{ "caption": "PDF Viewer: Forward", "command": "pdf_viewer_history", "args": {"forward": true} },
+	{ "caption": "PDF Viewer: Show Extracted Text", "command": "pdf_viewer_show_text" },
+	{ "caption": "PDF Viewer: Open in External Viewer", "command": "pdf_viewer_open_external" },
+	{ "caption": "PDF Viewer: Open as Hex (raw)", "command": "pdf_viewer_open_raw" },
+	{ "caption": "PDF Viewer: Toggle Inverted Colors", "command": "pdf_viewer_toggle_invert" },
+	{ "caption": "PDF Viewer: Reload", "command": "pdf_viewer_reload" },
+	{ "caption": "PDF Viewer: Keyboard Help", "command": "pdf_viewer_help" },
+	{
+		"caption": "Preferences: PDF Viewer Settings",
+		"command": "edit_settings",
+		"args": {
+			"base_file": "${packages}/PDFViewer/PDFViewer.sublime-settings",
+			"default": "// Settings in here override those in \"PDFViewer/PDFViewer.sublime-settings\"\n{\n\t$0\n}\n"
+		}
+	},
+	{
+		"caption": "Preferences: PDF Viewer Key Bindings",
+		"command": "edit_settings",
+		"args": {
+			"base_file": "${packages}/PDFViewer/Default.sublime-keymap",
+			"default": "[\n\t$0\n]\n"
+		}
+	}
+]
